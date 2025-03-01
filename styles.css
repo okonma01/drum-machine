@@ -1,0 +1,72 @@
+.block {
+    /* border: solid 1px black; */
+}
+
+#drum-machine {
+    height: 25%;
+}
+
+.drum-pad {
+    min-height: 33%;
+    margin: 0 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#top-row {
+    height: 20%;
+}
+
+
+#display {
+    display: flex;
+    align-items: center;
+    margin: 2% 0;
+}
+
+#bottom-row {
+    height: 80%;
+    padding: 2%;
+}
+
+#kit-switch {
+    height: 20%;
+    max-height: fit-content;
+}
+
+#afro-icon {
+    /* background-color: white; */
+    margin-left: 15%;
+    margin-top: 5%;
+    height: 75%;
+    width: 65%;
+}
+
+#rap-icon {
+    margin-left: 15%;
+    height: 80%;
+    width: 70%;
+}
+
+#volume-slider {
+    text-align: center;
+}
+
+#power-button,
+#kit-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: red; */
+}
+
+input[type=range] {
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    background: black !important;
+    -webkit-appearance: slider-vertical
+}
