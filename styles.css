@@ -1,35 +1,30 @@
-.block {
-    /* border: solid 1px black; */
-}
-
-#drum-machine {
-    height: 25%;
+#app {
+    background-image: url('https://res.cloudinary.com/gimmersta-wallpaper/image/upload/c_fill,f_auto,fl_progressive,q_auto,h_500/v1715789645/articles/GM0009NE03W_product.jpg');
+    background-size: auto;
 }
 
 .drum-pad {
-    min-height: 33%;
-    margin: 0 0.05rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-#top-row {
-    height: 20%;
+#drum-machine {
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
 #display {
     display: flex;
     align-items: center;
-    margin: 2% 0;
+    margin: 0.5% 0;
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    font-weight: lighter;
 }
 
-#bottom-row {
-    height: 80%;
-    padding: 2%;
-}
 
 #kit-switch {
     height: 20%;
@@ -54,14 +49,6 @@
     text-align: center;
 }
 
-#power-button,
-#kit-switch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* color: red; */
-}
-
 input[type=range] {
     text-align: center;
     width: 50%;
@@ -69,4 +56,42 @@ input[type=range] {
     cursor: pointer;
     background: black !important;
     -webkit-appearance: slider-vertical
+}
+
+/* Animate the drum pad on active click */
+.drum-pad.animate {
+    animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #drum-machine {
+        width: 90%;
+    }
+
+    #grid .drum-pad {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #grid .drum-pad {
+        flex: 1 1 30%;
+        margin: 5px;
+    }
 }
