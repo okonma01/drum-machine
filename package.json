@@ -1,8 +1,15 @@
 {
+  "homepage": "https://your-github-username.github.io/drum-machine",
   "name": "drum-machine",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "deploy": "npm run build && gh-pages -d dist",
+    "preview": "vite preview",
+    "build": "vite build"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
@@ -24,12 +31,5 @@
     "presets": [
       "nano-react-app"
     ]
-  },
-  "homepage": "https://okonma01.github.io/drum-machine",
-  "scripts": {
-    "start": "nano-react-app",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
   }
 }
