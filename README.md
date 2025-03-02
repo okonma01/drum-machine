@@ -1,56 +1,86 @@
-# Nano React App Default Javascript Template
+# Drum Machine
 
-The default template project for [nano-react-app](https://github.com/nano-react-app/nano-react-app).
+A minimalist React-based drum machine with African and hip-hop-inspired kits. Built using [Nano React App](https://github.com/nano-react-app) (Vite under the hood) and deployed on GitHub Pages.
 
-- `npm start` — This will spawn a development server with a default port of `5173`.
-- `npm run build` — This will output a production build in the `dist` directory.
-- `npm run preview` — This will run the production build locally with a default port of `5173` (this will not work if you haven't generated the production build yet).
+**Live Demo**: [Drum Machine on GitHub Pages](https://okonma01.github.io/drum-machine/)
 
-## Custom port
+---
 
-You can use the `-p` flag to specify a port for development. To do this, you can either run `npm start` with an additional flag:
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [License](#license)
 
+---
+
+## Overview
+This project was created to practice React fundamentals and is now polished for a personal portfolio. It includes two kits:
+- **Afro** beats
+- **Rap** kit
+
+Users can switch between kits, control power, and adjust volume. Keyboard shortcuts (Q, W, E, A, S, D, Z, X, C) trigger drum sounds.
+
+---
+
+## Features
+- **Power Toggle**: Turn the machine on/off.
+- **Kit Switch**: Toggle between Rap and Afro kits.
+- **Volume Control**: Adjust playback volume via a slider.
+- **Responsive Layout**: Adapts to mobile, tablet, and desktop screens.
+- **Keyboard Support**: Press Q, W, E, A, S, D, Z, X, C on your keyboard to trigger sounds.
+
+---
+
+## Installation
+1. **Clone** the repository:
+   ```bash
+   git clone https://github.com/okonma01/drum-machine.git
+
+2. Install dependencies:
+   ```bash
+   cd drum-machine
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   This runs the app in development mode at http://localhost:3000 (or whichever port Nano React App picks).
+
+---
+
+## Usage
+- Open the app in your browser.
+- Click the **Power** button to turn the machine on.
+- Click or press Q, W, E, A, S, D, Z, X, C to trigger sounds.
+- Adjust the **Volume** slider to control playback volume.
+- Click the **Kit** button to switch between the Afro and Rap kits.
+
+---
+
+## Deployment
+This project is deployed via GitHub Pages:
+
+1. Set "homepage": "https://<your-username>.github.io/drum-machine" in package.json.
+
+2. Add scripts to package.json:
+```json
+{
+  "scripts": {
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
 ```
-npm start -- --port 3000
-```
 
-Or edit the `start` script directly:
+3. Run `npm run deploy` to deploy the app to GitHub Pages.
 
-```
-vite --port 3000
-```
+---
 
-## Adding styles
-
-You can use CSS files with simple ES2015 `import` statements anywhere in your Javascript:
-
-```js
-import "./index.css";
-```
-
-## Babel transforms
-
-The Babel preset [babel-preset-nano-react-app](https://github.com/nano-react-app/babel-preset-nano-react-app) is used to support the same transforms that Create React App supports.
-
-The Babel configuration lives inside `package.json` and will override an external `.babelrc` file, so if you want to use `.babelrc` remember to delete the `babel` property inside `package.json`.
-
-
-## Deploy to GitHub Pages
-
-You can also deploy your project using GitHub pages.
-First install the `gh-pages` [package](https://github.com/tschaub/gh-pages):
-
-`npm i -D gh-pages`
-
-Use the following scripts for deployment:
-
-```js
-"scripts": {
-  "start": "vite",
-  "build": "vite build",
-  "predeploy": "rm -rf dist && vite build",
-  "deploy": "gh-pages -d dist"
-},
-```
-
-Then follow the normal procedure in GitHub Pages and select the `gh-pages` branch.
+## License
+This project is open source and available under the MIT License. Feel free to use or adapt this code for your own purposes.
