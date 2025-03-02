@@ -1,5 +1,5 @@
-const rapPath = "../public/samples/rap/";
-const afroPath = "../public/samples/afro/";
+const rapPath = "/drum-machine/samples/rap/";
+const afroPath = "/drum-machine/samples/afro/";
 
 const afroSamples = {
   q: afroPath.concat("Bongo 03.wav"),

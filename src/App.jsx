@@ -150,8 +150,8 @@ const KitSwitch = ({ handleClick, isEnabled, rapModeOn }) => (
       onChange={handleClick}
       disabled={!isEnabled}
       checked={rapModeOn}
-      checkedIcon={<img id="rap-icon" src="../public/icons/primary-krec.svg" alt="Rap" />}
-      uncheckedIcon={<img id="afro-icon" src="../public/icons/drum-3-svgrepo-com.svg" alt="Afro" />}
+      checkedIcon={<img id="rap-icon" src="/drum-machine/icons/primary-krec.svg" alt="Rap" />}
+      uncheckedIcon={<img id="afro-icon" src="/drum-machine/icons/drum-3-svgrepo-com.svg" alt="Afro" />}
       height={30}
       width={65}
     />
