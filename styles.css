@@ -1,5 +1,5 @@
 #app {
-    background-image: url('https://res.cloudinary.com/gimmersta-wallpaper/image/upload/c_fill,f_auto,fl_progressive,q_auto,h_500/v1715789645/articles/GM0009NE03W_product.jpg');
+    background-image: url('public/bg.jpeg');
     background-size: auto;
 }
 
@@ -55,7 +55,8 @@ input[type=range] {
     height: 100%;
     cursor: pointer;
     background: black !important;
-    -webkit-appearance: slider-vertical
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
 }
 
 /* Animate the drum pad on active click */
