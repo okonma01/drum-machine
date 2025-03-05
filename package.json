@@ -1,11 +1,11 @@
 {
-  "homepage": "https://your-github-username.github.io/drum-machine",
+  "homepage": "https://okonma01.github.io/drum-machine",
   "name": "drum-machine",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
   "scripts": {
-    "start": "nano-react-app",
+    "start": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

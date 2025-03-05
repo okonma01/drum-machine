@@ -54,13 +54,13 @@ const App = () => {
 
   return (
     <div id="app" className="d-flex justify-content-center align-items-center vh-100 bg-secondary">
-      <div id="drum-machine" className="container-fluid w-50 border d-flex flex-column bg-white py-2 px-0">
-        <div id="top-row" className="row justify-content-between p-1">
+      <div id="drum-machine">
+        <div id="top-row" className="drum-machine-row">
           <PowerButton handleClick={handlePowerButton} styles={powerStyle} />
           <Display inputValue={displayValue} />
           <div id="placeholder" className="col-2"></div>
         </div>
-        <div id="bottom-row" className="row justify-content-between p-1">
+        <div id="bottom-row" className="drum-machine-row">
           <VolumeSlider
             isEnabled={poweredOn}
             volume={volume}
@@ -92,7 +92,7 @@ const DrumPad = ({ value, isEnabled, rapModeOn, playAudio }) => {
     <button
       disabled={!isEnabled}
       id={padId}
-      className={`drum-pad col border border-secondary btn btn-light ${active ? "animate" : ""}`}
+      className={`drum-pad ${active ? "animate" : ""}`}
       onClick={handleClick}
     >
       {value}
@@ -101,18 +101,18 @@ const DrumPad = ({ value, isEnabled, rapModeOn, playAudio }) => {
 };
 
 const Grid = ({ isEnabled, rapModeOn, playAudio }) => (
-  <div id="grid" className="col-7 block container-fluid">
-    <div className="row justify-content-center mb-2">
+  <div id="grid" className="col-7">
+    <div className="grid-row">
       {["Q", "W", "E"].map((key) => (
         <DrumPad key={key} value={key} isEnabled={isEnabled} rapModeOn={rapModeOn} playAudio={playAudio} />
       ))}
     </div>
-    <div className="row justify-content-center mb-2">
+    <div className="grid-row">
       {["A", "S", "D"].map((key) => (
         <DrumPad key={key} value={key} isEnabled={isEnabled} rapModeOn={rapModeOn} playAudio={playAudio} />
       ))}
     </div>
-    <div className="row justify-content-center mb-2">
+    <div className="grid-row">
       {["Z", "X", "C"].map((key) => (
         <DrumPad key={key} value={key} isEnabled={isEnabled} rapModeOn={rapModeOn} playAudio={playAudio} />
       ))}
@@ -121,7 +121,7 @@ const Grid = ({ isEnabled, rapModeOn, playAudio }) => (
 );
 
 const PowerButton = ({ handleClick, styles }) => (
-  <button id="power-button" className="col-2 block fs-3 btn" onClick={handleClick} style={styles}>
+  <button id="power-button" className="col-2" onClick={handleClick} style={styles}>
     <FontAwesomeIcon icon={faPowerOff} />
   </button>
 );

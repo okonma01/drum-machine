@@ -1,6 +1,6 @@
 # Drum Machine
 
-A minimalist React-based drum machine with African and hip-hop-inspired kits. Built using [Nano React App](https://github.com/nano-react-app) (Vite under the hood) and deployed on GitHub Pages.
+A React-based drum machine with African and hip-hop-inspired kits. Built using [Nano React App](https://github.com/nano-react-app) (Vite under the hood) and deployed on GitHub Pages.
 
 **Live Demo**: [Drum Machine on GitHub Pages](https://okonma01.github.io/drum-machine/)
 
@@ -17,9 +17,9 @@ A minimalist React-based drum machine with African and hip-hop-inspired kits. Bu
 ---
 
 ## Overview
-This project was created to practice React fundamentals and is now polished for a personal portfolio. It includes two kits:
-- **Afro** beats
-- **Rap** kit
+I built this to learn React fundamentals. It includes two drum kits:
+- **Afrobeats**
+- **Hip hop**
 
 Users can switch between kits, control power, and adjust volume. Keyboard shortcuts (Q, W, E, A, S, D, Z, X, C) trigger drum sounds.
 
@@ -27,7 +27,7 @@ Users can switch between kits, control power, and adjust volume. Keyboard shortc
 
 ## Features
 - **Power Toggle**: Turn the machine on/off.
-- **Kit Switch**: Toggle between Rap and Afro kits.
+- **Kit Switch**: Toggle between Hip hop and Afro kits.
 - **Volume Control**: Adjust playback volume via a slider.
 - **Responsive Layout**: Adapts to mobile, tablet, and desktop screens.
 - **Keyboard Support**: Press Q, W, E, A, S, D, Z, X, C on your keyboard to trigger sounds.
@@ -58,14 +58,14 @@ Users can switch between kits, control power, and adjust volume. Keyboard shortc
 - Click the **Power** button to turn the machine on.
 - Click or press Q, W, E, A, S, D, Z, X, C to trigger sounds.
 - Adjust the **Volume** slider to control playback volume.
-- Click the **Kit** button to switch between the Afro and Rap kits.
+- Click the **Kit** button to switch between kits.
 
 ---
 
 ## Deployment
 This project is deployed via GitHub Pages:
 
-1. Set "homepage": "https://<your-username>.github.io/drum-machine" in package.json.
+1. Set "homepage": "https://`<your-username>`.github.io/drum-machine" in package.json.
 
 2. Add scripts to package.json:
 ```json
