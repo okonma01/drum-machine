@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import Switch from "react-switch";
 import { afroSamples, rapSamples } from "./drumSamples";
+import ReactSlider from "react-slider";
 
 const App = () => {
   const [displayValue, setDisplayValue] = useState("");
@@ -44,10 +45,10 @@ const App = () => {
   };
 
   const handleSliderClick = () => setDisplayValue("Volume: " + volume);
-  const handleSliderChange = (event) => {
-    const newVolume = event.target.value;
-    setVolume(newVolume);
-    setDisplayValue("Volume: " + newVolume);
+  const handleSliderChange = (value) => {
+    const invertedValue = 100 - value; // Reverse the value
+    setVolume(invertedValue);
+    setDisplayValue("Volume: " + invertedValue);
   };
 
   const powerStyle = poweredOn ? { color: "green" } : { color: "red" };
@@ -133,13 +134,18 @@ const Display = ({ inputValue }) => (
 );
 
 const VolumeSlider = ({ isEnabled, volume, handleClick, handleChange }) => (
-  <div id="volume-slider" className="col-2 block">
-    <input
-      type="range"
+  <div id="volume-slider" className="col-2">
+    <ReactSlider
+      className="vertical-slider"
+      thumbClassName="slider-thumb"
+      trackClassName="slider-track"
       disabled={!isEnabled}
-      value={volume}
+      value={100 - volume}
       onClick={handleClick}
       onChange={handleChange}
+      min={0}
+      max={100}
+      orientation="vertical" // Makes the slider vertical
     />
   </div>
 );
